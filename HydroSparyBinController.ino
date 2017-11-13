@@ -35,7 +35,7 @@
 
 // One Wire - Hydroponic temperatures
 // 
-#define TEMPERATURE1 8 // pin
+#define TEMPERATURE1 5 // pin
 
 #define ONE_TEMPERATURE_PRECISION 5
 OneWire oneWireBus1(TEMPERATURE1);
@@ -192,7 +192,7 @@ void refreshModbusRegisters()
   modbusRegisters[B1R1_1A_HS_001_MB] = (bool) B1R1_1A_HS_001.getScaledSample(); 
   modbusRegisters[HR_TEMPERATURE1] =  B1R1_1A_TT_001.getTempCByIndex(0) * 100;
 
-  modbusRegisters[HR_HEARTBEAT] = heartBeat;
+  modbusRegisters[HEART_BEAT] = heartBeat;
 
 
 

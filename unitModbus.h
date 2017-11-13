@@ -22,12 +22,13 @@
 // specific write holding registers to unit
 #define FUTURES CUSTOM_HR_START_WRITE
 
-#define B1R1_1A_ZY_001_MB CUSTOM_COIL_START_WRITE
+#define B1R1_1A_ZY_001_MB 80
 
-
-#define B1R1_1A_LSH_001_MB CUSTOM_COIL_START_READ  
+#define HEART_BEAT HR_TEMPERATURE1 + 1 
+#define B1R1_1A_LSH_001_MB HEART_BEAT + 1  
 #define B1R1_1A_ZSC_001_MB B1R1_1A_LSH_001_MB + 1
 #define B1R1_1A_HS_001_MB  B1R1_1A_ZSC_001_MB + 1
+
 
 // B1R1_1A_LSH_001 
 // write analogs/sp specific to units
